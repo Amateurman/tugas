@@ -6,7 +6,7 @@ function pdo_connect(){
     $DATABASE_PASS = '';
     $DATABASE_NAME = 'simplecrud';
     try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME, $DATABASE_USER, $DATABASE_PASS);
+    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {
     	die ('Failed to connect to database!');
     }
